@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+matrix.o: matrix.cpp.o
+
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o
+.PHONY : matrix.cpp.o
+
+matrix.i: matrix.cpp.i
+
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.i
+.PHONY : matrix.cpp.i
+
+matrix.s: matrix.cpp.s
+
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.s
+.PHONY : matrix.cpp.s
+
 mocker/mocker.o: mocker/mocker.cpp.o
 
 .PHONY : mocker/mocker.o
@@ -216,6 +243,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 	@echo "... mocker/mocker.o"
 	@echo "... mocker/mocker.i"
 	@echo "... mocker/mocker.s"

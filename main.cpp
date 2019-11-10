@@ -5,4 +5,3 @@ int main() {
     Tester::execute();
     return EXIT_SUCCESS;
 }
-
