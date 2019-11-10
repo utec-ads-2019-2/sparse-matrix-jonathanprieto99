@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.o"
-  "CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o"
   "CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o"
   "CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o"
   "sparse-matrix-jonathanprieto99"

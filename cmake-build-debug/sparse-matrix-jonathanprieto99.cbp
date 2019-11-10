@@ -83,9 +83,6 @@
 		<Unit filename="/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/main.cpp">
 			<Option target="sparse-matrix-jonathanprieto99"/>
 		</Unit>
-		<Unit filename="/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.cpp">
-			<Option target="sparse-matrix-jonathanprieto99"/>
-		</Unit>
 		<Unit filename="/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.h">
 			<Option target="sparse-matrix-jonathanprieto99"/>
 		</Unit>

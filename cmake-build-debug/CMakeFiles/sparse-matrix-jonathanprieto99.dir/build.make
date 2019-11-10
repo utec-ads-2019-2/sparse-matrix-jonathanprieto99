@@ -70,22 +70,9 @@ CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/main.cpp -o CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.s
 
-CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o: CMakeFiles/sparse-matrix-jonathanprieto99.dir/flags.make
-CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o: ../matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o -c /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.cpp
-
-CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.cpp > CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.i
-
-CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.cpp -o CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.s
-
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o: CMakeFiles/sparse-matrix-jonathanprieto99.dir/flags.make
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o: ../tester/tester.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o -c /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/tester/tester.cpp
 
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.s: cmake_force
 
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o: CMakeFiles/sparse-matrix-jonathanprieto99.dir/flags.make
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o: ../mocker/mocker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o -c /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/mocker/mocker.cpp
 
 CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.i: cmake_force
@@ -112,7 +99,6 @@ CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.s: cmake_force
 # Object files for target sparse-matrix-jonathanprieto99
 sparse__matrix__jonathanprieto99_OBJECTS = \
 "CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.o" \
-"CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o" \
 "CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o" \
 "CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o"
 
@@ -120,12 +106,11 @@ sparse__matrix__jonathanprieto99_OBJECTS = \
 sparse__matrix__jonathanprieto99_EXTERNAL_OBJECTS =
 
 sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/main.cpp.o
-sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/matrix.cpp.o
 sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/tester/tester.cpp.o
 sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/mocker/mocker.cpp.o
 sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make
 sparse-matrix-jonathanprieto99: CMakeFiles/sparse-matrix-jonathanprieto99.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sparse-matrix-jonathanprieto99"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sparse-matrix-jonathanprieto99"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sparse-matrix-jonathanprieto99.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

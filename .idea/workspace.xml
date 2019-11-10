@@ -36,7 +36,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8f5ef234-b9e0-4874-93bb-bbb9a6381424" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node.h" beforeDir="false" afterPath="$PROJECT_DIR$/node.h" afterDir="false" />
     </list>
@@ -103,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
-      <workItem from="1573310278546" duration="4811000" />
+      <workItem from="1573310278546" duration="25389000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -126,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573348280252</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Estructura OK">
+      <created>1573353403655</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573353403655</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +165,7 @@
     <MESSAGE value="Make Cmake" />
     <MESSAGE value="First Upload" />
     <MESSAGE value="First Small Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Small Changes" />
+    <MESSAGE value="Estructura OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estructura OK" />
   </component>
 </project>
