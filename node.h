@@ -6,28 +6,54 @@ class Matrix;
 
 //Nodo Externo
 template <typename T>
-class Node {
+class NodeExterno {
 protected:
     int posicion;
-    Node<T> *next, *down;
+    //El header necesita o next o down, tener cuidado se usa siguiente como ambos
+    NodeExterno<T> *siguiente;
 
 public:
-    explicit Node();
+    explicit NodeExterno(int posicion) : posicion(posicion){
+        siguiente=nullptr;
+    };
+
+    void killSelf(){
+        if(siguiente){
+            siguiente->killSelf();
+            delete this;
+        }
+        else{
+            delete this;
+        }
+    }
 
     friend class Matrix<T>;
 };
 
 //Nodo Interno
 template <typename T>
-class Node2 {
+class NodeInterno {
 protected:
     int x;
     int y;
-    int data;
-    Node2<T> *next, *down;
+    T data;
+    NodeInterno<T> *next, *down;
 
 public:
-    explicit Node2();
+    explicit NodeInterno(int posX, int posY, T data):x(x), y(y), data(data){
+        next = nullptr;
+        down = nullptr;
+    };
+
+    void killSelf(){
+        if(next){
+            next->killSelf();
+            delete this;
+        }
+        else{
+            delete this;
+        }
+    }
 
     friend class Matrix<T>;
 };

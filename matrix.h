@@ -2,6 +2,7 @@
 #define SPARSE_MATRIX_MATRIX_H
 
 #include <stdexcept>
+#include "node.h"
 
 using namespace std;
 

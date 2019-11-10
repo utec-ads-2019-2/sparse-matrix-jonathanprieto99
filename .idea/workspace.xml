@@ -35,10 +35,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5ef234-b9e0-4874-93bb-bbb9a6381424" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/matrix.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node.h" beforeDir="false" afterPath="$PROJECT_DIR$/node.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
-      <workItem from="1573310278546" duration="2792000" />
+      <workItem from="1573310278546" duration="4811000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -120,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573310468024</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First Small Changes">
+      <created>1573348280252</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573348280252</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make Cmake" />
     <MESSAGE value="First Upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Upload" />
+    <MESSAGE value="First Small Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Small Changes" />
   </component>
 </project>
