@@ -24,7 +24,7 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
             ASSERT(result(i, j) == matrix1[i][j] * scalar, "There is a problem with the scalar multiplication");
         }
     }
-
+/*
     int **matrix2 = buildMatrix<T>(rows, columns);
     Matrix<T> test2 = setMatrix<T>(matrix2, rows, columns);
     result = test1 + test2;
@@ -40,6 +40,7 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
             ASSERT(result(i, j) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
         }
     }
+     */
 }
 
 template <typename T>
@@ -65,4 +66,5 @@ Matrix<T> Tester::setMatrix(T **&matrix, unsigned int rows, unsigned int columns
     }
 
     return result;
+
 }

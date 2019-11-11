@@ -16,8 +16,8 @@ public:
     Matrix(unsigned rows, unsigned columns): root(nullptr), rows(rows), columns(columns){
 
         root = new Node<T>(-1,-1,-1);
-        Node<T>* actual1=root;
-        Node<T>* actual2=root;
+        Node<T>* actual1 = root;
+        Node<T>* actual2 = root;
 
         //Rows
         for (unsigned int i = 0; i < rows+1; ++i) {
@@ -34,27 +34,30 @@ public:
         }
     };
 
-    Node<T>* find(int x, int y){
-        if(x > columns or y > rows){
-            throw out_of_range("Indice fuera de rango (revisar x e y!)");
-        }
-        Node<T> *actual = root;
-        //Recorriendo Fila
-        while(actual->x < x and actual->next != nullptr){
-            actual = actual->next;
-        }
-        //Recorriendo Columna
-        while(actual->y < y and actual->down != nullptr){
-            actual=actual->down;
-        }
+    Node<T>* find(int X, int Y){
+        //if(x > columns or y > rows){
+        //    throw out_of_range("Indice fuera de rango (revisar x e y!)");
+        //}
+        //else {
+            Node<T>* actual = root;
+            //Recorriendo Fila
+            while ((actual->x < X) and actual->next != nullptr) {
+                actual = actual->next;
+            }
+            //Recorriendo Columna
+            while ((actual->y < Y) and actual->down != nullptr) {
+                actual = actual->down;
+            }
 
-        if(actual->x == x and actual->y == y){
-            return actual;
+            if (actual->x == X and actual->y == Y) {
+                return actual;
+            }
+
+            else {
+                return nullptr;
+            }
         }
-        else{
-            return nullptr;
-        }
-    }
+    //}
 
     void addNode(int x, int y, T data){
         //Update data if exists
@@ -185,18 +188,18 @@ public:
         for (int i = 0; i < other.columns; ++i) {
             //Iteramos sobre las filas que son las mismas
             for (int j = 0; j < rows; ++j) {
-                //Esto va dar el valor a ingresar en la matriz
-                auto sumrow = 0;
-                //Iteramos sobre las columnas de la matriz actual
-                for (int k = 0; k < columns; ++k) {
-                    if(find(i, j) != nullptr and other.find(i,j) != nullptr){
-                        sumrow = sumrow + operator()(j,k) * operator()(k,i);
+                if(find(i, j) != nullptr and other.find(i,j) != nullptr){
+                    //Esto va dar el valor a ingresar en la matriz
+                    T sumrow = 0;
+                    //Iteramos sobre las columnas de la matriz actual
+                    for (int k = 0; k < columns; ++k) {
+                            sumrow = sumrow + operator()(j,k) * operator()(k,i);
+                            newMatrix.set(i, j, sumrow);
                     }
-                }
-                newMatrix.set(i, j, sumrow);
-            }
+                 }
         }
         return newMatrix;
+    }
     };
 
     //Suma de matriz mas matriz
@@ -252,7 +255,7 @@ public:
     };
 
     ~Matrix(){
-        for (int i = rows; i >= 0; --i) {
+        for (int i = 0; i < rows; ++i) {
             find(0, i)->killSelf();
         }
     };
