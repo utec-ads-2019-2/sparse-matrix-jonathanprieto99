@@ -36,10 +36,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f5ef234-b9e0-4874-93bb-bbb9a6381424" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node.h" beforeDir="false" afterPath="$PROJECT_DIR$/node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tester/tester.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tester/tester.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
-      <workItem from="1573310278546" duration="31457000" />
+      <workItem from="1573310278546" duration="31998000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -141,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573425429313</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tests">
+      <created>1573445620189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573445620189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +168,7 @@
     <MESSAGE value="Estructura OK" />
     <MESSAGE value="OK" />
     <MESSAGE value="Some Errors Yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Errors Yet" />
+    <MESSAGE value="Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests" />
   </component>
 </project>

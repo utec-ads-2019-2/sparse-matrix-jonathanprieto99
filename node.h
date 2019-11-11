@@ -12,7 +12,10 @@ private:
     T data;
     Node<T> *next, *down;
 public:
-    explicit Node(int x, int y, T data): x(x), y(y), data(data), next(nullptr),down(nullptr){};
+    explicit Node(int x, int y, T data): x(x), y(y), data(data){
+        next = nullptr;
+        down = nullptr;
+    };
 
     void killSelf(){
         if(next != nullptr and down != nullptr){
