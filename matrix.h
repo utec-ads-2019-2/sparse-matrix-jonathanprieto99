@@ -35,10 +35,10 @@ public:
     };
 
     Node<T>* find(int X, int Y){
-        //if(x > columns or y > rows){
-        //    throw out_of_range("Indice fuera de rango (revisar x e y!)");
-        //}
-        //else {
+        if(X > columns or Y > rows){
+            cout<<"Indice fuera de rango (revisar x e y!)";
+        }
+        else{
             Node<T>* actual = root;
             //Recorriendo Fila
             while ((actual->x < X) and actual->next != nullptr) {
@@ -50,14 +50,22 @@ public:
             }
 
             if (actual->x == X and actual->y == Y) {
-                return actual;
+                    return actual;
             }
-
             else {
                 return nullptr;
             }
         }
-    //}
+    }
+
+    T getdata(int x, int y){
+        if(find(x,y) == nullptr){
+            return 0;
+        }
+        else{
+            return find(x,y)->data;
+        }
+    }
 
     void addNode(int x, int y, T data){
         //Update data if exists
@@ -188,18 +196,18 @@ public:
         for (int i = 0; i < other.columns; ++i) {
             //Iteramos sobre las filas que son las mismas
             for (int j = 0; j < rows; ++j) {
-                if(find(i, j) != nullptr and other.find(i,j) != nullptr){
-                    //Esto va dar el valor a ingresar en la matriz
-                    T sumrow = 0;
-                    //Iteramos sobre las columnas de la matriz actual
-                    for (int k = 0; k < columns; ++k) {
-                            sumrow = sumrow + operator()(j,k) * operator()(k,i);
-                            newMatrix.set(i, j, sumrow);
+                //Esto va dar el valor a ingresar en la matriz
+                T sumrow = 0;
+                //Iteramos sobre las columnas de la matriz actual
+                for (int k = 0; k < columns; ++k) {
+                    if (find(i, j) != nullptr and other.find(i, j) != nullptr) {
+                        sumrow = sumrow + operator()(j, k) * operator()(k, i);
                     }
-                 }
+                }
+                newMatrix.set(i, j, sumrow);
+            }
         }
         return newMatrix;
-    }
     };
 
     //Suma de matriz mas matriz
@@ -253,12 +261,13 @@ public:
             cout<<endl;
         }
     };
-
+/*
     ~Matrix(){
         for (int i = 0; i < rows; ++i) {
             find(0, i)->killSelf();
         }
     };
+    */
 
 };
 

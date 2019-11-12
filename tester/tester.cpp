@@ -16,15 +16,15 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
 
     T **matrix1 = buildMatrix<T>(rows, columns);
     Matrix<T> test1 = setMatrix<T>(matrix1, rows, columns);
-
     unsigned int scalar = mocker.generateRandomInt(10);
+
     Matrix<T> result = test1 * scalar;
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < columns; ++j) {
             ASSERT(result(i, j) == matrix1[i][j] * scalar, "There is a problem with the scalar multiplication");
         }
     }
-/*
+
     int **matrix2 = buildMatrix<T>(rows, columns);
     Matrix<T> test2 = setMatrix<T>(matrix2, rows, columns);
     result = test1 + test2;
@@ -40,7 +40,6 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
             ASSERT(result(i, j) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
         }
     }
-     */
 }
 
 template <typename T>

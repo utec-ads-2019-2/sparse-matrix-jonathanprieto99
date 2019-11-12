@@ -6,19 +6,16 @@ class Matrix;
 
 template <typename T>
 class Node {
-private:
+protected:
     int x;
     int y;
     T data;
     Node<T> *next, *down;
 public:
-    explicit Node(int x, int y, T data): x(x), y(y), data(data){
-        next = nullptr;
-        down = nullptr;
-    };
-
+    explicit Node(int x, int y, T data): x(x), y(y), data(data), next(nullptr), down(nullptr){};
+/*
     void killSelf(){
-        if(next != nullptr and down != nullptr){
+        if(next != nullptr){
             next->killSelf();
             //down->killSelf();
             delete this;
@@ -27,6 +24,7 @@ public:
             delete this;
         }
     }
+    */
 
     friend class Matrix<T>;
 };
