@@ -3,8 +3,8 @@
 #include "matrix.h"
 
 int main() {
-    //Tester::execute();
-
+    Tester::execute();
+    /*
     Matrix<int> Matrix_TEST(5,5);
     Matrix_TEST.set(0,1,3);
     Matrix_TEST.set(2,0,5);
@@ -14,7 +14,7 @@ int main() {
     cout<<"Find: "<<endl;
     cout<<Matrix_TEST.getdata(0,1)<<endl; //Funciona Find
     cout<<"T operator: "<<endl;
-    cout<<Matrix_TEST.operator()(0,1)<<endl; //Funciona (Toperator)
+    cout<<Matrix_TEST.operator()(2,0)<<endl; //Funciona (Toperator)
     cout<<"Multiplicacion por escalar: (Funciona)"<<endl;
     Matrix_TEST.operator*(2).print(); //No Funciona (Multiplicacion por Escalar)
     cout<<"Set en 0 (Borrar): "<<endl;
@@ -37,6 +37,6 @@ int main() {
     Matrix_TEST.operator-(Matrix_TEST2).print();
     cout<<"Matriz transpuesta: "<<endl;
     Matrix_TEST.transpose().print();
-
-    //return EXIT_SUCCESS;
+*/
+    return EXIT_SUCCESS;
 }

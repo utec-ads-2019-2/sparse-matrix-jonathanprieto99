@@ -13,18 +13,13 @@ protected:
     Node<T> *next, *down;
 public:
     explicit Node(int x, int y, T data): x(x), y(y), data(data), next(nullptr), down(nullptr){};
-/*
+
     void killSelf(){
         if(next != nullptr){
             next->killSelf();
-            //down->killSelf();
-            delete this;
-        }
-        else{
             delete this;
         }
     }
-    */
 
     friend class Matrix<T>;
 };

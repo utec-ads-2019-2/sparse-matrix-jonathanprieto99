@@ -16,8 +16,8 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
 
     T **matrix1 = buildMatrix<T>(rows, columns);
     Matrix<T> test1 = setMatrix<T>(matrix1, rows, columns);
-    unsigned int scalar = mocker.generateRandomInt(10);
 
+    unsigned int scalar = mocker.generateRandomInt(10);
     Matrix<T> result = test1 * scalar;
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < columns; ++j) {

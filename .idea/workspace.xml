@@ -106,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
-      <workItem from="1573310278546" duration="43283000" />
+      <workItem from="1573310278546" duration="46031000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573452412292</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create Own Tester for testing purposes. //Still have problems with official tester">
+      <created>1573562221940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573562221940</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +189,7 @@
     <MESSAGE value="OK" />
     <MESSAGE value="Some Errors Yet" />
     <MESSAGE value="Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests" />
+    <MESSAGE value="Create Own Tester for testing purposes. //Still have problems with official tester" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Own Tester for testing purposes. //Still have problems with official tester" />
   </component>
 </project>

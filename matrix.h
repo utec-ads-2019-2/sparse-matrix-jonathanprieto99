@@ -34,7 +34,7 @@ public:
         }
     };
 
-    Node<T>* find(int X, int Y){
+    Node<T>* find(int X, int Y) const{
         if(X > columns or Y > rows){
             cout<<"Indice fuera de rango (revisar x e y!)";
         }
@@ -67,7 +67,7 @@ public:
         }
     }
 
-    void addNode(int x, int y, T data){
+    void addNode(int x, int y, T data) const{
         //Update data if exists
         if(find(x,y) != nullptr){
             find(x,y)->data = data;
@@ -121,7 +121,7 @@ public:
         }
     }
 
-    void remove(Node<T>* nodo){
+    void remove(Node<T>* nodo)const{
         //int xtemp=nodo->x;
         //int ytemp=nodo->y;
         //if(find(xtemp,ytemp)!= nullptr){
@@ -153,7 +153,7 @@ public:
         }
     }
 
-    void set(int x, int y, T data){
+    void set(int x, int y, T data)const{
        //Si se setea la data de una matriz en 0, es que queremos eliminar ese nodo
         if(data != 0){
             addNode(x, y, data);
@@ -163,7 +163,7 @@ public:
         }
     }
 
-    T operator()(int x, int y){
+    T operator()(int x, int y)const{
         Node<T>* NodeTemp = find(x, y);
         if(NodeTemp == nullptr){
             return 0;
@@ -174,7 +174,7 @@ public:
     }
 
     //Multiplicacion de Matriz por escalar
-    Matrix<T> operator*(T scalar){
+    Matrix<T> operator*(T scalar)const{
         Matrix<T> newMatrix(rows, columns);
         //Se iterara por filas y columnas para acceder a todos los elementos
         for (int i = 0; i < rows; ++i) {
@@ -189,7 +189,7 @@ public:
 
     //Multiplicacion de Matriz por matriz
     //La matriz resultante mantiene el numero de filas de la original y el numero de columnas de la otra (other)
-    Matrix<T> operator*(Matrix<T> other){
+    Matrix<T> operator*(Matrix<T> other)const{
         //Creamos la nueva Matriz
         Matrix<T> newMatrix(rows, other.columns);
         //Iteramos sobre las columnas de la otra matriz
@@ -211,7 +211,7 @@ public:
     };
 
     //Suma de matriz mas matriz
-    Matrix<T> operator+(Matrix<T> other){
+    Matrix<T> operator+(Matrix<T> other)const{
         //Both have to be of the same size
         Matrix<T> newMatrix(rows, other.columns);
         for (int i = 0; i < rows; ++i) {
@@ -223,7 +223,7 @@ public:
     };
 
     //Resta de matriz menos matriz
-    Matrix<T> operator-(Matrix<T> other){
+    Matrix<T> operator-(Matrix<T> other)const{
         //Both have to be of the same size
         Matrix<T> newMatrix(rows, other.columns);
         for (int i = 0; i < rows; ++i) {
@@ -235,7 +235,7 @@ public:
     }
 
     //Matriz Transpuesta
-    Matrix<T> transpose(){
+    Matrix<T> transpose()const{
         Matrix<T> newMatrix(columns, rows);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
@@ -248,7 +248,7 @@ public:
     };
 
     //Print
-    void print(){
+    void print()const{
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
                 if(find(i, j) != nullptr){
@@ -261,13 +261,14 @@ public:
             cout<<endl;
         }
     };
-/*
+
     ~Matrix(){
         for (int i = 0; i < rows; ++i) {
-            find(0, i)->killSelf();
+            if(find(0, i)){
+                find(0,i)->killSelf();
+            }
         }
     };
-    */
 
 };
 
