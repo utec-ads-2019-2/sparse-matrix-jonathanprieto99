@@ -3,8 +3,8 @@
 #include "matrix.h"
 
 int main() {
-    Tester::execute();
-    /*
+    //Tester::execute();
+
     Matrix<int> Matrix_TEST(5,5);
     Matrix_TEST.set(0,1,3);
     Matrix_TEST.set(2,0,5);
@@ -29,7 +29,7 @@ int main() {
     Matrix_TEST2.print();
     cout<<"Matriz test1:"<<endl;
     Matrix_TEST.print();
-    cout<<"Multiplicacion de dos matrices: (no funciona) "<<endl;
+    cout<<"Multiplicacion de dos matrices: (Funciona) "<<endl;
     Matrix_TEST.operator*(Matrix_TEST2).print();
     cout<<"Suma de dos matrices: (Funciona)"<<endl;
     Matrix_TEST.operator+(Matrix_TEST2).print();
@@ -37,6 +37,6 @@ int main() {
     Matrix_TEST.operator-(Matrix_TEST2).print();
     cout<<"Matriz transpuesta: "<<endl;
     Matrix_TEST.transpose().print();
-*/
-    return EXIT_SUCCESS;
+
+    //return EXIT_SUCCESS;
 }
