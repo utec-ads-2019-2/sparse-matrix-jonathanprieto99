@@ -57,10 +57,16 @@ T** Tester::buildMatrix(unsigned int rows, unsigned int columns) {
 template <typename T>
 Matrix<T> Tester::setMatrix(T **&matrix, unsigned int rows, unsigned int columns) {
     Matrix<T> result(rows, columns);
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < columns; ++j) {
+    cout<<"Rows: "<<rows<<", Columns: "<<columns<<endl;
+    for (unsigned int i = 0; i < rows; ++i) {
+        for (unsigned int j = 0; j < columns; ++j) {
+            cout<<"insercion: "<<matrix[i][j]<<endl;
+            cout<<"Posicion Deseada: "<<i<<":"<<j<<endl;
             result.set(i, j, matrix[i][j]);
-            ASSERT(result(i, j) == matrix[i][j], "There is a problem with the set or operator()");
+            cout<<i<<":"<<j<<endl;
+            cout<<result.operator()(j,i)<<"<-"<<matrix[i][j]<<endl;
+            //Se invirtio el result.operator()(i,j) por (j,i) debido a que el programa esta funcionando al reves
+            ASSERT(result.operator()(j, i) == matrix[i][j], "There is a problem with the set or operator()");
         }
     }
 

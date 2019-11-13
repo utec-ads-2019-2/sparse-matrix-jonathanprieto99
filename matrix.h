@@ -18,16 +18,16 @@ public:
         root = new Node<T>(-1,-1,-1);
         Node<T>* actual1 = root;
         Node<T>* actual2 = root;
-
+//Se invirtio ambos for
         //Rows
-        for (unsigned int i = 0; i < rows+1; ++i) {
+        for (unsigned int i = 0; i < columns+1; ++i) {
             auto* TempNode = new Node<T>(i, -1, i);
             actual1->next = TempNode;
             actual1 = actual1->next;
         }
 
         //Columns
-        for (unsigned int j = 0; j < columns+1; ++j) {
+        for (unsigned int j = 0; j < rows+1; ++j) {
             auto* TempNode = new Node<T>(-1, j, j);
             actual2->down = TempNode;
             actual2 = actual2->down;
@@ -36,7 +36,7 @@ public:
 
     Node<T>* find(int X, int Y) const{
         if(X > columns or Y > rows){
-            cout<<"Indice fuera de rango (revisar x e y!)";
+            cerr<<"Indice fuera de rango (revisar x e y!)";
         }
         else{
             Node<T>* actual = root;
@@ -78,6 +78,7 @@ public:
             Node<T> *RecorredorX = root->next;
             Node<T> *RecorredorY = root->down;
             //Podria ser while(RecorredorX->x != x)
+            //verif <=
             while(RecorredorX->x < x){
                 RecorredorX=RecorredorX->next;
             }
@@ -155,7 +156,7 @@ public:
         }
     }
 
-    void set(int x, int y, T data) const{
+    void set(int y, int x, T data) const{
        //Si se setea la data de una matriz en 0, es que queremos eliminar ese nodo
         if(data != 0){
             addNode(x, y, data);

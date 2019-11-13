@@ -36,11 +36,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f5ef234-b9e0-4874-93bb-bbb9a6381424" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node.h" beforeDir="false" afterPath="$PROJECT_DIR$/node.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester/tester.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tester/tester.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
       <workItem from="1573310278546" duration="46031000" />
-      <workItem from="1573569847952" duration="5866000" />
+      <workItem from="1573569847952" duration="15116000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -180,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573569984011</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Version Para pruebas">
+      <created>1573604133777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573604133777</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +215,7 @@
     <MESSAGE value="Tests" />
     <MESSAGE value="Create Own Tester for testing purposes. //Still have problems with official tester" />
     <MESSAGE value="ok mine" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok mine" />
+    <MESSAGE value="Version Para pruebas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Para pruebas" />
   </component>
 </project>
