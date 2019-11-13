@@ -18,9 +18,8 @@ public:
     explicit Node(int x, int y, T data): x(x), y(y), data(data), next(nullptr), down(nullptr){};
 
     void killSelf(){
-        if(next != nullptr){
-            next->killSelf();
-            delete this;
+        if(this->next != nullptr){
+            this->next->killSelf();
         }
     }
 

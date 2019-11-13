@@ -4,6 +4,7 @@
 
 int main() {
     Tester::execute();
+    return EXIT_SUCCESS;
 /*
     //Setear nueva Matriz
     //Matrix<int> Matrix_TEST(5,5);
@@ -60,5 +61,4 @@ int main() {
     cout<<"Matriz transpuesta: "<<endl;
     Matrix_TEST.transpose().print();
 */
-    return EXIT_SUCCESS;
 }
