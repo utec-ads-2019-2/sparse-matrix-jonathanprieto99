@@ -188,7 +188,7 @@ public:
         return newMatrix;
     }
 
-    //Multiplicacion de Matriz por matriz
+//Multiplicacion de Matriz por matriz
     //La matriz resultante mantiene el numero de filas de la original y el numero de columnas de la otra (other)
     Matrix<T> operator*(Matrix<T> other) const{
         if(rows!=other.rows){
@@ -246,14 +246,15 @@ public:
 
     //Matriz Transpuesta
     Matrix<T> transpose() const{
-        Matrix<T> newMatrix(columns, rows);
+        Matrix<T> newMatrix(rows, columns);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
                if(find(i,j) != nullptr){
-                   newMatrix.set(j, i, find(i, j)->data);
+                   newMatrix.set(i,j,find(i,j)->data);
                }
             }
         }
+        newMatrix.print();
         return newMatrix;
     };
 
@@ -262,10 +263,10 @@ public:
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
                 if(find(j, i) != nullptr){
-                    cout<< find(j, i)->data<<" ";
+                    cout<< find(j,i)->data<<" ";
                 }
                 else{
-                    cout<<" ";
+                    cout<<"0";
                 }
             }
             cout<<endl;

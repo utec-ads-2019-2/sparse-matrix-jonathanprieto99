@@ -28,6 +28,7 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
     int **matrix2 = buildMatrix<T>(rows, columns);
     Matrix<T> test2 = setMatrix<T>(matrix2, rows, columns);
     Matrix<T> test3 = setMatrix<T>(matrix2, rows, columns);
+    Matrix<T> test4 = setMatrix<T>(matrix2, rows, columns);
 
     Matrix<T> result2=(test1+test2);
     for (unsigned int i = 0; i < rows; ++i) {
@@ -43,7 +44,6 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
             ASSERT(result3.operator()(j,i) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
         }
     }
-
 }
 
 template <typename T>
