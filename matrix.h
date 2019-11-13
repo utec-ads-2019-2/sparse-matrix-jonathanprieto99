@@ -182,8 +182,9 @@ public:
         //Se iterara por filas y columnas para acceder a todos los elementos
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                if(find(i,j) != nullptr){
-                    newMatrix.set(i, j, operator()(i, j)*scalar);
+                //cout<<"i: "<<i<<"j: "<<j<<endl;
+                if(find(j,i) != nullptr){
+                    newMatrix.set(i, j, operator()(j, i)*scalar);
                 }
             }
         }
@@ -218,16 +219,39 @@ public:
 
     //Suma de matriz mas matriz
     Matrix<T> operator+(Matrix<T> other) const{
-        if(rows!=other.rows or columns!=other.columns){
+        if(rows != other.rows or columns != other.columns){
             cerr<<("Tamano Diferente");
         }
         //Both have to be of the same size
-        Matrix<T> newMatrix(rows, other.columns);
+        Matrix<T> newMatrix(rows, columns);
+        cout<<"other rows: "<<rows<<"other columns: "<<columns<<"-------------------------------"<<endl;
+
+        cout<<"------------------------------------------------"<<endl;
+        this->print();
+        cout<<"------------------------------------------------"<<endl;
+
+        cout<<"------------------------------------------------"<<endl;
+        other.print();
+        cout<<"------------------------------------------------"<<endl;
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                newMatrix.set(i, j, operator()(i, j) + other.operator()(i, j));
+                //cout<<"i: "<<i<<"j: "<<j<<endl;
+                //cout<<"Operator T: "<<operator()(j,i)<<endl;
+                //cout<<"OtherOperator T: "<<other.operator()(j,i)<<endl;
+                //cout<<"------------------------------------------------"<<endl;
+                //other.print();
+                //cout<<"------------------------------------------------"<<endl;
+                //this->print();
+                //cout<<"------------------------------------------------"<<endl;
+                newMatrix.set(i, j, operator()(j,i) + other.operator()(j,i));
             }
         }
+        cout<<"------------------------------------------------"<<endl;
+        newMatrix.print();
+        cout<<"------------------------------------------------"<<endl;
+        cout<<"Result en funcion: "<<newMatrix.operator()(0,0)<<endl;
+        cout<<"Result en funcion2: "<<newMatrix.operator()(1,0)<<endl;
+        cout<<"Result en funcion2: "<<newMatrix.operator()(2,0)<<endl;
         return newMatrix;
     };
 
@@ -240,7 +264,7 @@ public:
         Matrix<T> newMatrix(rows, other.columns);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                newMatrix.set(i, j, operator()(i, j) - other.operator()(i, j));
+                newMatrix.set(i, j, operator()(j, i) - other.operator()(i, j));
             }
         }
         return newMatrix;
@@ -263,8 +287,8 @@ public:
     void print() const{
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                if(find(i, j) != nullptr){
-                    cout<< find(i, j)->data<<" ";
+                if(find(j, i) != nullptr){
+                    cout<< find(j, i)->data<<" ";
                 }
                 else{
                     cout<<" ";

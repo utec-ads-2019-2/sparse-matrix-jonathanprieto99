@@ -36,8 +36,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8f5ef234-b9e0-4874-93bb-bbb9a6381424" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sparse-matrix-jonathanprieto99.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sparse-matrix-jonathanprieto99" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/matrix.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tester/tester.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tester/tester.cpp" afterDir="false" />
     </list>
@@ -114,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573310277094</updated>
       <workItem from="1573310278546" duration="46031000" />
-      <workItem from="1573569847952" duration="15116000" />
+      <workItem from="1573569847952" duration="30756000" />
     </task>
     <task id="LOCAL-00001" summary="Make Cmake">
       <created>1573310417077</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573604133777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="El set Funciona Perfecto &#10;Se empieza a probar los operators.">
+      <created>1573614268341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573614268341</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +223,7 @@
     <MESSAGE value="Create Own Tester for testing purposes. //Still have problems with official tester" />
     <MESSAGE value="ok mine" />
     <MESSAGE value="Version Para pruebas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Para pruebas" />
+    <MESSAGE value="El set Funciona Perfecto &#10;Se empieza a probar los operators." />
+    <option name="LAST_COMMIT_MESSAGE" value="El set Funciona Perfecto &#10;Se empieza a probar los operators." />
   </component>
 </project>
