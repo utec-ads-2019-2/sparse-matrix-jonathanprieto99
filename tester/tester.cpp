@@ -27,22 +27,23 @@ void Tester::testMatrix(unsigned int rows, unsigned int columns) {
 
     int **matrix2 = buildMatrix<T>(rows, columns);
     Matrix<T> test2 = setMatrix<T>(matrix2, rows, columns);
-    result = test1.operator+(test2);
+    Matrix<T> test3 = setMatrix<T>(matrix2, rows, columns);
+
+    Matrix<T> result2=(test1+test2);
     for (unsigned int i = 0; i < rows; ++i) {
         for (unsigned int j = 0; j < columns; ++j) {
-            cout<<"j: "<<j<<" i: "<<i<<endl;
-            cout<<"Resultado Suma: "<<result.getdata(j,i)<<" Resultado Real: "<<matrix1[i][j] + matrix2[i][j]<<endl;
-            //ASSERT(result.operator()(i,j) == matrix1[j][i] + matrix2[j][i], "There is a problem with the addition");
+            ASSERT(result2.operator()(j,i) == matrix1[i][j] + matrix2[i][j], "There is a problem with the addition");
         }
     }
-    /*
-    result = test1 - test2;
+
+
+    Matrix<T> result3=(test1-test3);
     for (unsigned int i = 0; i < rows; ++i) {
         for (unsigned int j = 0; j < columns; ++j) {
-            ASSERT(result.operator()(j, i) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
+            ASSERT(result3.operator()(j,i) == matrix1[i][j] - matrix2[i][j], "There is a problem with the subtraction");
         }
     }
-    */
+
 }
 
 template <typename T>
@@ -60,15 +61,9 @@ T** Tester::buildMatrix(unsigned int rows, unsigned int columns) {
 template <typename T>
 Matrix<T> Tester::setMatrix(T **&matrix, unsigned int rows, unsigned int columns) {
     Matrix<T> result(rows, columns);
-    //cout<<"Rows: "<<rows<<", Columns: "<<columns<<endl;
     for (unsigned int i = 0; i < rows; ++i) {
         for (unsigned int j = 0; j < columns; ++j) {
-            //cout<<"insercion: "<<matrix[i][j]<<endl;
-            //cout<<"Posicion Deseada: "<<i<<":"<<j<<endl;
             result.set(i, j, matrix[i][j]);
-            //cout<<i<<":"<<j<<endl;
-            //cout<<result.operator()(j,i)<<"<-"<<matrix[i][j]<<endl;
-            //Se invirtio el result.operator()(i,j) por (j,i) debido a que el programa esta funcionando al reves
             ASSERT(result.operator()(j, i) == matrix[i][j], "There is a problem with the set or operator()");
         }
     }

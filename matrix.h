@@ -35,22 +35,20 @@ public:
     };
 
     Node<T>* find(int X, int Y) const{
-        if(X > columns or Y > rows){
+        if(X > columns || Y > rows){
             cerr<<"Indice fuera de rango (revisar x e y!)";
-        }
-        else{
+        }else{
             Node<T>* actual = root;
             //Recorriendo Fila
-            while ((actual->x < X) and actual->next != nullptr) {
+            while ((actual->x < X) && actual->next != nullptr) {
                 actual = actual->next;
             }
             //Recorriendo Columna
-            while ((actual->y < Y) and actual->down != nullptr) {
+            while ((actual->y < Y) && actual->down != nullptr) {
                 actual = actual->down;
             }
-
-            if (actual->x == X and actual->y == Y) {
-                    return actual;
+            if (actual->x == X && actual->y == Y) {
+                return actual;
             }
             else {
                 return nullptr;
@@ -91,7 +89,7 @@ public:
             }
             else{
                 //Vamos bajando en Y hasta encontrar un espacion vacio
-                while(RecorredorX->y != y and RecorredorX->down != nullptr){
+                while(RecorredorX->y != y && RecorredorX->down != nullptr){
                     RecorredorX = RecorredorX->down;
                 }
                 //Ingresamos el nodo temporal en el espacio en blanco
@@ -109,7 +107,7 @@ public:
                 RecorredorY->next = NodeTemp;
             }
             else{
-                while(RecorredorY->x != x and RecorredorY->next != nullptr){
+                while(RecorredorY->x != x && RecorredorY->next != nullptr){
                     RecorredorY = RecorredorY->next;
                 }
                 if(RecorredorY->next == nullptr){
@@ -182,7 +180,6 @@ public:
         //Se iterara por filas y columnas para acceder a todos los elementos
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                //cout<<"i: "<<i<<"j: "<<j<<endl;
                 if(find(j,i) != nullptr){
                     newMatrix.set(i, j, operator()(j, i)*scalar);
                 }
@@ -207,7 +204,7 @@ public:
                 T sumrow = 0;
                 //Iteramos sobre las columnas de la matriz actual
                 for (int k = 0; k < columns; ++k) {
-                    if (find(i, j) != nullptr and other.find(i, j) != nullptr) {
+                    if (find(i, j) != nullptr && other.find(i, j) != nullptr) {
                         sumrow = sumrow + operator()(j, k) * operator()(k, i);
                     }
                 }
@@ -219,56 +216,33 @@ public:
 
     //Suma de matriz mas matriz
     Matrix<T> operator+(Matrix<T> other) const{
-        if(rows != other.rows or columns != other.columns){
+        if(rows != other.rows || columns != other.columns){
             cerr<<("Tamano Diferente");
         }
         //Both have to be of the same size
         Matrix<T> newMatrix(rows, columns);
-        cout<<"other rows: "<<rows<<"other columns: "<<columns<<"-------------------------------"<<endl;
-
-        cout<<"------------------------------------------------"<<endl;
-        this->print();
-        cout<<"------------------------------------------------"<<endl;
-
-        cout<<"------------------------------------------------"<<endl;
-        other.print();
-        cout<<"------------------------------------------------"<<endl;
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                //cout<<"i: "<<i<<"j: "<<j<<endl;
-                //cout<<"Operator T: "<<operator()(j,i)<<endl;
-                //cout<<"OtherOperator T: "<<other.operator()(j,i)<<endl;
-                //cout<<"------------------------------------------------"<<endl;
-                //other.print();
-                //cout<<"------------------------------------------------"<<endl;
-                //this->print();
-                //cout<<"------------------------------------------------"<<endl;
                 newMatrix.set(i, j, operator()(j,i) + other.operator()(j,i));
             }
         }
-        cout<<"------------------------------------------------"<<endl;
-        newMatrix.print();
-        cout<<"------------------------------------------------"<<endl;
-        cout<<"Result en funcion: "<<newMatrix.operator()(0,0)<<endl;
-        cout<<"Result en funcion2: "<<newMatrix.operator()(1,0)<<endl;
-        cout<<"Result en funcion2: "<<newMatrix.operator()(2,0)<<endl;
         return newMatrix;
     };
 
     //Resta de matriz menos matriz
-    Matrix<T> operator-(Matrix<T> other) const{
-        if(rows!=other.rows or columns!=other.columns){
+    Matrix<T> operator - (Matrix<T> other) const{
+        if(rows != other.rows || columns != other.columns){
             cerr<<("Tamano Diferente");
         }
         //Both have to be of the same size
-        Matrix<T> newMatrix(rows, other.columns);
+        Matrix<T> newMatrix2(rows, columns);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
-                newMatrix.set(i, j, operator()(j, i) - other.operator()(i, j));
+                newMatrix2.set(i, j, operator()(j, i) - other.operator()(j,i));
             }
         }
-        return newMatrix;
-    }
+        return newMatrix2;
+    };
 
     //Matriz Transpuesta
     Matrix<T> transpose() const{

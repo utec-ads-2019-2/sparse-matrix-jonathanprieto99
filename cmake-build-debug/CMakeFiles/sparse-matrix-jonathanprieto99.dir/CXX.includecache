@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/main.cpp
+iostream
+-
+tester/tester.h
+/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/tester/tester.h
+matrix.h
+/Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.h
+
 /Users/jonathanprieto/Documents/GitHub/sparse-matrix-jonathanprieto99/matrix.h
 stdexcept
 -
