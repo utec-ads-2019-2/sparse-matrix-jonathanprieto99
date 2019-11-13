@@ -6,11 +6,14 @@ class Matrix;
 
 template <typename T>
 class Node {
-protected:
+private:
     int x;
     int y;
     T data;
+
+protected:
     Node<T> *next, *down;
+
 public:
     explicit Node(int x, int y, T data): x(x), y(y), data(data), next(nullptr), down(nullptr){};
 

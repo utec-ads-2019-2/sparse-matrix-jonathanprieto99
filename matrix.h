@@ -58,7 +58,7 @@ public:
         }
     }
 
-    T getdata(int x, int y){
+    T getdata(int x, int y) const{
         if(find(x,y) == nullptr){
             return 0;
         }
@@ -77,10 +77,12 @@ public:
             auto *NodeTemp = new Node<T>(x,y,data);
             Node<T> *RecorredorX = root->next;
             Node<T> *RecorredorY = root->down;
-            while(RecorredorX->x != x){
+            //Podria ser while(RecorredorX->x != x)
+            while(RecorredorX->x < x){
                 RecorredorX=RecorredorX->next;
             }
-            while(RecorredorY->y != y){
+            //Podria ser while(RecorredorY->y != y)
+            while(RecorredorY->y < y){
                 RecorredorY=RecorredorY->down;
             }
             if(RecorredorX->down == nullptr){
@@ -121,7 +123,7 @@ public:
         }
     }
 
-    void remove(Node<T>* nodo)const{
+    void remove(Node<T>* nodo) const{
         //int xtemp=nodo->x;
         //int ytemp=nodo->y;
         //if(find(xtemp,ytemp)!= nullptr){
@@ -153,7 +155,7 @@ public:
         }
     }
 
-    void set(int x, int y, T data)const{
+    void set(int x, int y, T data) const{
        //Si se setea la data de una matriz en 0, es que queremos eliminar ese nodo
         if(data != 0){
             addNode(x, y, data);
@@ -163,7 +165,7 @@ public:
         }
     }
 
-    T operator()(int x, int y)const{
+    T operator()(int x, int y) const{
         Node<T>* NodeTemp = find(x, y);
         if(NodeTemp == nullptr){
             return 0;
@@ -174,7 +176,7 @@ public:
     }
 
     //Multiplicacion de Matriz por escalar
-    Matrix<T> operator*(T scalar)const{
+    Matrix<T> operator*(T scalar) const{
         Matrix<T> newMatrix(rows, columns);
         //Se iterara por filas y columnas para acceder a todos los elementos
         for (int i = 0; i < rows; ++i) {
@@ -189,7 +191,10 @@ public:
 
     //Multiplicacion de Matriz por matriz
     //La matriz resultante mantiene el numero de filas de la original y el numero de columnas de la otra (other)
-    Matrix<T> operator*(Matrix<T> other)const{
+    Matrix<T> operator*(Matrix<T> other) const{
+        if(rows!=other.rows){
+            cerr<<("Tamano Incorrecto");
+        }
         //Creamos la nueva Matriz
         Matrix<T> newMatrix(rows, other.columns);
         //Iteramos sobre las columnas de la otra matriz
@@ -211,7 +216,10 @@ public:
     };
 
     //Suma de matriz mas matriz
-    Matrix<T> operator+(Matrix<T> other)const{
+    Matrix<T> operator+(Matrix<T> other) const{
+        if(rows!=other.rows or columns!=other.columns){
+            cerr<<("Tamano Diferente");
+        }
         //Both have to be of the same size
         Matrix<T> newMatrix(rows, other.columns);
         for (int i = 0; i < rows; ++i) {
@@ -223,7 +231,10 @@ public:
     };
 
     //Resta de matriz menos matriz
-    Matrix<T> operator-(Matrix<T> other)const{
+    Matrix<T> operator-(Matrix<T> other) const{
+        if(rows!=other.rows or columns!=other.columns){
+            cerr<<("Tamano Diferente");
+        }
         //Both have to be of the same size
         Matrix<T> newMatrix(rows, other.columns);
         for (int i = 0; i < rows; ++i) {
@@ -235,7 +246,7 @@ public:
     }
 
     //Matriz Transpuesta
-    Matrix<T> transpose()const{
+    Matrix<T> transpose() const{
         Matrix<T> newMatrix(columns, rows);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
@@ -248,7 +259,7 @@ public:
     };
 
     //Print
-    void print()const{
+    void print() const{
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < columns; ++j) {
                 if(find(i, j) != nullptr){
