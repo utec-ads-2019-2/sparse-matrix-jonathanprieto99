@@ -21,6 +21,7 @@ public:
         if(this->next != nullptr){
             this->next->killSelf();
         }
+        // Nunca estás liberando los datos
     }
 
     friend class Matrix<T>;

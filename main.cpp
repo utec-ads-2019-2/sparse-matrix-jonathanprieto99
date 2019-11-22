@@ -3,7 +3,7 @@
 #include "matrix.h"
 
 int main() {
-    Matrix<int> Matrix_TEST(5,5);
+    /*Matrix<int> Matrix_TEST(5,5);
     Matrix_TEST.set(0,1,3);
     Matrix_TEST.set(2,0,5);
     Matrix_TEST.set(4,3,6);
@@ -12,7 +12,7 @@ int main() {
     Matrix_TEST.print();
 
     cout<<"Matriz Transpuesta test: "<<endl;
-    Matrix_TEST.transpose();
+    Matrix_TEST.transpose();*/
 
     Tester::execute();
     return EXIT_SUCCESS;

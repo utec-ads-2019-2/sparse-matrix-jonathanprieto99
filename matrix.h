@@ -35,6 +35,7 @@ public:
     };
 
     Node<T>* find(int X, int Y) const{
+        // Sería mejor lanzar una excepción para evitar el warning
         if(X > columns || Y > rows){
             cerr<<"Indice fuera de rango (revisar x e y!)";
         }else{
@@ -65,8 +66,10 @@ public:
         }
     }
 
+    // Hay código que se repite que podría reducirse
     void addNode(int x, int y, T data) const{
         //Update data if exists
+        // Deberías guardarlo como variable, estás ejecutando dos veces un find, eso es costoso
         if(find(x,y) != nullptr){
             find(x,y)->data = data;
         }
@@ -174,6 +177,8 @@ public:
         }
     }
 
+    // Para las operaciones sería mejor utilizar los punteros directamente en vez de los métodos para que la ejecución sea más eficiente
+
     //Multiplicacion de Matriz por escalar
     Matrix<T> operator*(T scalar) const{
         Matrix<T> newMatrix(rows, columns);
@@ -274,7 +279,10 @@ public:
     };
 
     ~Matrix(){
+        // Si implementas un destructor y trabajas con returns de los objetos, también debes implementar el constructor copia y el operator =
         for (int i = 0; i < rows; ++i) {
+
+            // Faltó dar delete
             if(find(0, i)){
                 find(0,i)->killSelf();
             }
